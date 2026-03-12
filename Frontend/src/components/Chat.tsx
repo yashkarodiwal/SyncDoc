@@ -46,7 +46,7 @@ export default function Chat({ documentId }: Props) {
             try {
 
                 const res = await axios.get(
-                    `http://localhost:5000/api/chat/${documentId}`,
+                    `https://syncdoc.onrender.com/api/chat/${documentId}`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -97,7 +97,7 @@ export default function Chat({ documentId }: Props) {
             if (file) formData.append("file", file);
 
             const res = await axios.post(
-                "http://localhost:5000/api/chat",
+                "https://syncdoc.onrender.com/api/chat",
                 formData,
                 {
                     headers: {
