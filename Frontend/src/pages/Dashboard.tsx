@@ -26,7 +26,7 @@ export default function Dashboard() {
             try {
 
                 const res = await axios.get(
-                    "http://localhost:5000/api/documents",
+                    "https://syncdoc.onrender.com/api/documents",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -55,7 +55,7 @@ export default function Dashboard() {
         try {
 
             const res = await axios.post(
-                "http://localhost:5000/api/documents",
+                "https://syncdoc.onrender.com/api/documents",
                 {},
                 {
                     headers: {
