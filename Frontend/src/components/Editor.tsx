@@ -121,7 +121,7 @@ export default function Editor({ documentId, onContentChange }: Props) {
                 const token = localStorage.getItem("token");
 
                 const res = await axios.get(
-                    `http://localhost:5000/api/documents/${documentId}`,
+                    `https://syncdoc.onrender.com/api/documents/${documentId}`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -155,7 +155,7 @@ export default function Editor({ documentId, onContentChange }: Props) {
                 const content = quillRef.current?.root.innerHTML;
 
                 await axios.put(
-                    `http://localhost:5000/api/documents/${documentId}`,
+                    `https://syncdoc.onrender.com/api/documents/${documentId}`,
                     { content },
                     {
                         headers: {
