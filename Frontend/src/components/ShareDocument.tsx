@@ -18,7 +18,7 @@ export default function ShareDocument({ documentId }: Props) {
         try {
 
             await axios.post(
-                "http://localhost:5000/api/documents/share",
+                "https://syncdoc.onrender.com/api/documents/share",
                 {
                     documentId,
                     email,
