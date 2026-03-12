@@ -25,7 +25,7 @@ export default function AIPanel({ content }: Props) {
             setResult("");
 
             const res = await axios.post(
-                `http://localhost:5000/api/ai/${endpoint}`,
+                `https://syncdoc.onrender.com/api/ai/${endpoint}`,
                 { content },
                 {
                     headers: {
