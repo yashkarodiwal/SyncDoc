@@ -16,7 +16,7 @@ export default function DocumentTitle({ documentId }: Props) {
         const loadTitle = async () => {
 
             const res = await axios.get(
-                `http://localhost:5000/api/documents/${documentId}`,
+                `https://syncdoc.onrender.com/api/documents/${documentId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -38,7 +38,7 @@ export default function DocumentTitle({ documentId }: Props) {
         try {
 
             await axios.put(
-                `http://localhost:5000/api/documents/${documentId}/title`,
+                `https://syncdoc.onrender.com/api/documents/${documentId}/title`,
                 { title },
                 {
                     headers: {
